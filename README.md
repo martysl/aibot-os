@@ -32,7 +32,7 @@ Here you can download [corrade](http://grimore.org/secondlife/scripted_agents/co
 ## known issues in current version:  
 - [ ] Bot not have automatic upload sounds to second life/opensimulator just send mp3 link (maybe in future media on prim, we will see)  
 - [ ] Bot not put texture on prim just say a link in local chat (opensim can implement this, second life - only media on prim)  
-- [ ] Cant send audio to api even via link
+- [ ] Cant send audio to api even via link (not implemented on bot side)
 - [ ] max resonse text is only 250 characters (in teory limits of second life/opensim but you can experiment)
 ## what i wish to add someday with free time
 - To shape be able to make a song with response on prompt and some api

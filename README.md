@@ -42,15 +42,18 @@ Here you can download [corrade](http://grimore.org/secondlife/scripted_agents/co
 
 ## What You need to remember:
 In shape settings 
-- about your shape responses can be max 250 characters  
-- about every prompt she got start from name of person what is "Name:"  
+- in your shape personality tell your shape responses can be max 250 characters  
+- in your shape personality tell your shape every prompt she got start from name of person what is "Name:"  
 In php:
 - configure API key  
-- configure shape model example: shapeinc/username (of course put yours shape handle:) )  
+- configure shape model example: shapeinc/username (of course put yours shape handle:) )
+- configure passowrd for api (should be other than connector)
+- configure passowrd for connector
 in LSL:
 - set prefix
 - set channel id (can be name or number up to you)
 - set url of api
+- set password to connector 
 ## Usage:
 to use just say !prefix and your prompt, prefix you can cofigure in lsl.  
 Example:

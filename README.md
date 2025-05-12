@@ -28,7 +28,8 @@ Here you can download [corrade](http://grimore.org/secondlife/scripted_agents/co
 - [x] Read prompt on local chat 
 - [x] Send reply on local chat
 - [x] Generate Image based on prompt (you need say make image)
-## What is not in current version:  
+- [x] Search for information in internet (with !web included in prompt) example !t !web who is new pope and shape will answer
+## known issues in current version:  
 - [ ] Bot not have automatic upload sounds to second life/opensimulator just send mp3 link (this probably never will work that way)  
 - [ ] Bot not put texture on prim just say a link in local chat (opensim can implement this, second life no)  
 - [ ] Cant send audio to api even via link

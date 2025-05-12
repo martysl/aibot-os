@@ -26,16 +26,16 @@ Configure lsl Script: use optional-corrade-brain instead of object one and fill 
 Here you can download [corrade](http://grimore.org/secondlife/scripted_agents/corrade)  
 ## What bot can
 - [x] Read prompt on local chat 
-- [x] Send reply on local chat
+- [x] Send reply on local chat (250 characters)
 - [x] Generate Image based on prompt (you need say make image)
 - [x] Search for information in internet (with !web included in prompt) example !t !web who is new pope and shape will answer
 ## known issues in current version:  
-- [ ] Bot not have automatic upload sounds to second life/opensimulator just send mp3 link (this probably never will work that way)  
-- [ ] Bot not put texture on prim just say a link in local chat (opensim can implement this, second life no)  
+- [ ] Bot not have automatic upload sounds to second life/opensimulator just send mp3 link (maybe in future media on prim, we will see)  
+- [ ] Bot not put texture on prim just say a link in local chat (opensim can implement this, second life - only media on prim)  
 - [ ] Cant send audio to api even via link
-- [ ] max resonse text is only 250 characters (limits of second life/opensim)
+- [ ] max resonse text is only 250 characters (in teory limits of second life/opensim but you can experiment)
 ## what i wish to add someday with free time
-- To shape be able to make a song with response on prompt and some api (hopefully can find free) 
+- To shape be able to make a song with response on prompt and some api
 - Use dynamic texture to automatic put image on prim
 - To let user send mp3 link to let shape transcribe it to text 
 - Longer response, other processing response
@@ -43,13 +43,13 @@ Here you can download [corrade](http://grimore.org/secondlife/scripted_agents/co
 
 ## What You need to remember:
 In shape settings 
-- in your shape personality tell your shape responses can be max 250 characters  
-- in your shape personality tell your shape every prompt she got start from name of person what is "Name:"  
+- in your shape personality tell your shape responses can be max 250 characters (u can experiment but i found this optimal)
+- in your shape personality tell your shape every prompt she got start from name of person "Name:" so example what is user name is Agi it will start from Agi:
 In php:
 - configure API key  
 - configure shape model example: shapeinc/username (of course put yours shape handle:) )
-- configure passowrd for api (should be other than connector)
-- configure passowrd for connector
+- configure password for api (should be other than connector)
+- configure password for connector
 in LSL:
 - set prefix
 - set channel id (can be name or number up to you)

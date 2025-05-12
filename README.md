@@ -7,21 +7,23 @@ cd shapes-aibot-slos
 ```
 ## 2. Deploy LSL Scripts in OpenSim/Second life  
 Create an Object: In your OpenSim/Second life environment, create a new object (e.g., a prim).  
-Add LSL Script: Open the object's script editor and paste the contents of lsl/brain-sl-object.lsl remember to put url to your api backend.  
+Add LSL Script: Open the object's script editor and paste the contents of lsl/brain-sl-object.lsl 
+
+remember to put url to your api backend and password.  
 
 Configure Script: Ensure the script contains the correct URL pointing to your PHP backend.  
 
 ## 3.Set Up the PHP Backend  
 Web Server: Ensure you have a web server (e.g., Apache or Nginx) with PHP support.  
 
-Deploy PHP Scripts: Copy the contents of the php/ directory to your web server's root or a subdirectory and put apikey in config.php and model in api.php file.  
+Deploy PHP Scripts: Copy the contents of the php/ directory to your web server's root or a subdirectory and put apikey in config.php and model in api.php file, remember to put all needed password and data.  
 
 ## 4. Optional: Integrate Corrade Bot  
 If you wish to enhance the bot's capabilities using Corrade:  
 
 Set Up Corrade: Follow the Corrade setup guide to deploy the Corrade bot in your OpenSim/secondlife environment.  
 
-Configure lsl Script: use optional-corrade-brain instead of object one and fill needed config to communicate with Corrade by sending appropriate commands. not forgot to set api url.  
+Configure lsl Script: use optional-corrade-brain instead of object one and fill needed config to communicate with Corrade by sending appropriate commands. not forgot to set api url and password.  
 
 Here you can download [corrade](http://grimore.org/secondlife/scripted_agents/corrade)  
 ## What bot can
@@ -33,7 +35,7 @@ Here you can download [corrade](http://grimore.org/secondlife/scripted_agents/co
 - [ ] Bot not have automatic upload sounds to second life/opensimulator just send mp3 link (maybe in future media on prim, we will see)  
 - [ ] Bot not put texture on prim just say a link in local chat (opensim can implement this, second life - only media on prim)  
 - [ ] Cant send audio to api even via link (not implemented on bot side)
-- [ ] max resonse text is only 250 characters (in teory limits of second life/opensim but you can experiment)
+- [ ] max response text is only 250 characters (in teory limits of second life/opensim but you can experiment)
 ## what i wish to add someday with free time
 - To shape be able to make a song with response on prompt and some api
 - Use dynamic texture to automatic put image on prim

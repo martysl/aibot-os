@@ -32,7 +32,9 @@ if ($method === 'POST' || $method === 'GET') {
             exit;
         }
 
-        $keyword = "make image";
+        $dataprompt = str_replace("use internet", "!web", $dataprompt); //this will make your shape search in internet,example prompt: use internet and tell me weather in paris
+        $keyword = "make image"; //this must be setup in shape settings example prompt: make image of flower
+        
         $pos = strpos($dataprompt, $keyword);
         if ($pos !== false) {
             $dataprompt = substr($dataprompt, $pos);

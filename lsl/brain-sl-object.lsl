@@ -41,7 +41,7 @@ default {
     send = name2 + ": " + message;
     string user_channel = (string)id + "_" + channelid;
 
-    string tQUERY =  "password=" password + "&uuid=" + user_channel + "&channelid=" + channelid + "&prompt="+llEscapeURL(send);
+    string tQUERY =  "password=" + password + "&uuid=" + user_channel + "&channelid=" + channelid + "&prompt="+llEscapeURL(send);
     string url = "https://urltoyourphp.com/slai.php";
     llHTTPRequest(url, [HTTP_METHOD, "POST", HTTP_MIMETYPE, "application/x-www-form-urlencoded", HTTP_BODY_MAXLENGTH, 16384], tQUERY);
     }

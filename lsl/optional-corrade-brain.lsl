@@ -69,7 +69,7 @@ default
     string url = "https://yourapiurl/slai.php";
     string prompt = message;
     string user_channel = (string)id + "_" + channelid;
-    string tQUERY =  "password=" password + "&uuid=" + user_channel + "&channelid=" + channelid + "&prompt=" + name2 + ":" + " " + prompt;
+    string tQUERY =  "password=" password + "&uuid=" + user_channel + "&channelid=" + channelid + "&prompt=" + name2 + ":" + " " + llEscapeURL(prompt);
     llHTTPRequest(url, [HTTP_METHOD, "POST", HTTP_MIMETYPE, "application/x-www-form-urlencoded", HTTP_BODY_MAXLENGTH, 16384], tQUERY);
     }
     }

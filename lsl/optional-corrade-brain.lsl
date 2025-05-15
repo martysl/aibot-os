@@ -15,8 +15,19 @@ string password = ""; //your password here
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Functions
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+string channelid=""; //put here your channel name!
+string StripOthers(string Input) {
+    
+    integer Counter = llStringLength(Input);
+    string Whitelist = "ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789";
+    while (Counter--) {
+        if (-1 == llSubStringIndex(Whitelist, llToUpper(llGetSubString(Input, Counter, Counter)))) {
+            Input = llDeleteSubString(Input, Counter, Counter);
+        }
+    }
+    return Input;
+}
 
- 
 string wasKeyValueEncode(list kvp)
 {
   if(llGetListLength(kvp) < 2) return "";
@@ -49,7 +60,8 @@ default
     if (llSubStringIndex(message, target) != -1) {
     message = llDeleteSubString(message, 0, 6);
     who = llGetDisplayName(id);
-    listname=llParseString2List(who,[" "],[]);
+    string cleaned = StripOthers(who);
+    listname=llParseString2List(cleaned,[" "],[]);
     name2 = llList2String(listname, 0);
     if (name2 == "") {
     name2 = name;
@@ -58,7 +70,7 @@ default
     string prompt = message;
     string user_channel = (string)id + "_" + channelid;
     string tQUERY =  "password=" password + "&uuid=" + user_channel + "&channelid=" + channelid + "&prompt=" + name2 + ":" + " " + prompt;
-    llHTTPRequest(url, [HTTP_METHOD, "POST", HTTP_MIMETYPE, "application/x-www-form-urlencoded", HTTP_BODY_MAXLENGTH, 16384], postData);
+    llHTTPRequest(url, [HTTP_METHOD, "POST", HTTP_MIMETYPE, "application/x-www-form-urlencoded", HTTP_BODY_MAXLENGTH, 16384], tQUERY);
     }
     }
  
